@@ -11,7 +11,7 @@ function playSentence(message)
 {
     voice = message.member.voiceChannel
     voice.join().then(function(connection){
-        dispatcher = connection.playFile("voices/hgrunt/"+msg.shift()+".wav")
+        dispatcher = connection.playFile("path-to-audio"+msg+".wav/.ogg")
         console.log("Going through words.")
         dispatcher.on('end', function() {
             if(msg[0])
@@ -42,4 +42,4 @@ client.on("ready", function(message) {
     console.log("Ready!");
 })
 
-client.login("MzcxNTA4MDMyMTI0NzQ3Nzc4.DM7h_Q.LAapmQ-L1lAzu6Isd67XYedgOBw")
+client.login("token")
